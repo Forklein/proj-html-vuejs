@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="jumbotron">
+    <section class="jumbotron">
       <div class="container">
         <div class="row">
           <div class="col-6 d-flex justify-content-center align-items-center">
@@ -36,13 +36,43 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section class="leading-edge mt-5">
+      <div class="container">
+        <div class="row text-center">
+          <h4 class="p-3">Let's Dream Big Together</h4>
+          <h2 class="p-3 fw-bold">
+            We Are pioneers of the digital approach, using leading-edge <br />
+            technology to simplify procedures and apply executive <br />
+            coaching in the new age of digitalization.
+          </h2>
+        </div>
+        <div class="row mt-5">
+          <div v-for="(data, index) in dataLeading" :key="index" class="col-4">
+            <LeadingCard :data="data" />
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
+//# Data
+import dataLeading from "@/assets/data/dataLeading.js";
+//# Components
+import LeadingCard from "@/components/LeadingCard.vue";
+
 export default {
   name: "Main",
+  components: {
+    LeadingCard,
+  },
+  data() {
+    return {
+      dataLeading,
+    };
+  },
 };
 </script>
 
@@ -70,6 +100,11 @@ main {
       position: absolute;
       top: 20%;
       right: 20px;
+    }
+  }
+  .leading-edge {
+    h4 {
+      color: $color-jungle-green;
     }
   }
 }
