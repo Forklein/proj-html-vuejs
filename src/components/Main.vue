@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="text-center">
     <section class="jumbotron">
       <div class="container">
         <div class="row">
@@ -15,7 +15,7 @@
                 Whole-Life Business Coaching for committed <br />
                 entrepreneurs
               </h5>
-              <div class="button w-50 text-center px-3 py-3 rounded">
+              <div class="button w-50 px-3 py-3 rounded">
                 <p class="m-0">Get started today</p>
               </div>
             </div>
@@ -27,7 +27,7 @@
                 alt=""
               />
             </div>
-            <div class="icons bg-white d-flex flex-column text-center rounded">
+            <div class="icons bg-white d-flex flex-column rounded">
               <i class="fas fa-ruler p-2"></i>
               <i class="far fa-life-ring p-2"></i>
               <i class="far fa-sticky-note p-2"></i>
@@ -39,7 +39,7 @@
     </section>
     <section class="leading-edge mt-5">
       <div class="container">
-        <div class="row text-center">
+        <div class="row">
           <h4 class="p-3">Let's Dream Big Together</h4>
           <h2 class="p-3 fw-bold">
             We Are pioneers of the digital approach, using leading-edge <br />
@@ -52,6 +52,25 @@
             <LeadingCard :data="data" />
           </div>
         </div>
+        <div class="row mt-5">
+          <div class="col-6 mx-auto d-flex justify-content-evenly">
+            <p class="m-0 p-3 first border rounded">Learn more</p>
+            <p class="m-0 p-3 second rounded">Get started today</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="explore mt-5">
+      <div class="container">
+        <div class="row pt-5">
+          <h4>Let's Dream Big Together</h4>
+          <h2>Explore How can I help you</h2>
+        </div>
+        <div class="row">
+          <div v-for="(data, index) in dataExplore" :key="index" class="col-4">
+            <ExploreCard :data="data" />
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -60,17 +79,22 @@
 <script>
 //# Data
 import dataLeading from "@/assets/data/dataLeading.js";
+import dataExplore from "@/assets/data/dataExplore.js";
+
 //# Components
 import LeadingCard from "@/components/LeadingCard.vue";
+import ExploreCard from "@/components/ExploreCard.vue";
 
 export default {
   name: "Main",
   components: {
     LeadingCard,
+    ExploreCard,
   },
   data() {
     return {
       dataLeading,
+      dataExplore,
     };
   },
 };
@@ -103,6 +127,21 @@ main {
     }
   }
   .leading-edge {
+    h4 {
+      color: $color-jungle-green;
+    }
+    p {
+      &.first {
+        color: $color-jungle-green;
+      }
+      &.second {
+        background-color: $color-jungle-green;
+        color: $color-white;
+      }
+    }
+  }
+  .explore {
+    background-color: $color-porcelain;
     h4 {
       color: $color-jungle-green;
     }
