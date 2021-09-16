@@ -86,9 +86,17 @@
           <h4>Let's Dream Big Together</h4>
           <h1 class="p-2 fw-bold">Explore How can I help you</h1>
         </div>
-        <div class="row">
+        <div class="row mb-5">
           <div v-for="(data, index) in dataCourses" :key="index" class="col-3">
             <CoursesCard :data="data" />
+          </div>
+          <div class="col-6 mx-auto mt-5">
+            <p>
+              Take the control of their life back and start doing things to make
+              their dream come true.
+              <strong><u>View all courses</u></strong>
+              <i class="fas fa-long-arrow-alt-right p-2"></i>
+            </p>
           </div>
         </div>
       </div>
