@@ -167,6 +167,12 @@
           <h4>Wanna transform your life?</h4>
           <h1 class="p-2 fw-bold">Upcoming Events</h1>
         </div>
+        <div class="row">
+          <div class="col-6">
+            <EventsCard />
+          </div>
+          <div class="col-6"></div>
+        </div>
       </div>
     </section>
   </main>
@@ -177,11 +183,13 @@
 import dataLeading from "@/assets/data/dataLeading.js";
 import dataExplore from "@/assets/data/dataExplore.js";
 import dataCourses from "@/assets/data/dataCourses.js";
+import dataEvents from "@/assets/data/dataEvents.js";
 
 //# Components
-import LeadingCard from "@/components/LeadingCard.vue";
-import ExploreCard from "@/components/ExploreCard.vue";
-import CoursesCard from "@/components/CoursesCard.vue";
+import LeadingCard from "@/components/subcomponents/LeadingCard.vue";
+import ExploreCard from "@/components/subcomponents/ExploreCard.vue";
+import CoursesCard from "@/components/subcomponents/CoursesCard.vue";
+import EventsCard from "@/components/subcomponents/EventsCard.vue";
 
 export default {
   name: "Main",
@@ -189,12 +197,14 @@ export default {
     LeadingCard,
     ExploreCard,
     CoursesCard,
+    EventsCard,
   },
   data() {
     return {
       dataLeading,
       dataExplore,
       dataCourses,
+      dataEvents,
     };
   },
 };
@@ -258,7 +268,7 @@ main {
     }
   }
   .video {
-    height: 800px;
+    min-height: 800px;
     background-color: $color-tuna;
     h1 {
       color: $color-white;
