@@ -163,7 +163,7 @@
     </section>
     <section class="events">
       <div class="container">
-        <div class="row pt-5 mb-5">
+        <div class="title row pt-5 mb-5">
           <h4>Wanna transform your life?</h4>
           <h1 class="p-2 fw-bold">Upcoming Events</h1>
         </div>
@@ -183,6 +183,27 @@
         </div>
       </div>
     </section>
+    <section class="feedback">
+      <div class="container">
+        <div class="title row pt-5 mb-5">
+          <h4>People are praising Maxcoach</h4>
+          <h1 class="p-2 fw-bold">What make they love us?</h1>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row mb-5 p-5">
+          <div
+            v-for="(data, index) in dataFeedback"
+            :key="index"
+            @click="setIndexFeedback(index)"
+            class="col-4"
+            :class="data.done ? '' : 'opacity-50'"
+          >
+            <FeedbackCard :data="data" />
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -192,12 +213,14 @@ import dataLeading from "@/assets/data/dataLeading.js";
 import dataExplore from "@/assets/data/dataExplore.js";
 import dataCourses from "@/assets/data/dataCourses.js";
 import dataEvents from "@/assets/data/dataEvents.js";
+import dataFeedback from "@/assets/data/dataFeedback.js";
 
 //# Components
 import LeadingCard from "@/components/subcomponents/LeadingCard.vue";
 import ExploreCard from "@/components/subcomponents/ExploreCard.vue";
 import CoursesCard from "@/components/subcomponents/CoursesCard.vue";
 import EventsCard from "@/components/subcomponents/EventsCard.vue";
+import FeedbackCard from "@/components/subcomponents/FeedbackCard.vue";
 
 export default {
   name: "Main",
@@ -206,14 +229,30 @@ export default {
     ExploreCard,
     CoursesCard,
     EventsCard,
+    FeedbackCard,
   },
   data() {
     return {
+      //# JS FILE
       dataLeading,
       dataExplore,
       dataCourses,
       dataEvents,
+      dataFeedback,
     };
+  },
+  methods: {
+    setIndexFeedback(i) {
+      this.dataFeedback.map((element, index) => {
+        if (element.done) {
+          element.done = !element.done;
+        }
+        if (i === index) {
+          element.done = !element.done;
+        }
+        return element;
+      });
+    },
   },
 };
 </script>
@@ -277,7 +316,7 @@ main {
   }
   .video {
     min-height: 800px;
-    background-color: $color-tuna;
+    background-color: #343142;
     h1 {
       color: $color-white;
     }
@@ -308,10 +347,23 @@ main {
     }
   }
   .events {
+    .title {
+      h4 {
+        color: $color-jungle-green;
+      }
+    }
     h4,
     p {
       strong,
       i {
+        color: $color-jungle-green;
+      }
+    }
+  }
+  .feedback {
+    background-color: $color-porcelain;
+    .title {
+      h4 {
         color: $color-jungle-green;
       }
     }
