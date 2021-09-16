@@ -101,7 +101,14 @@
         </div>
       </div>
     </section>
-    <section class="video"></section>
+    <section class="video">
+      <div class="container-fluid h-100">
+        <div class="row h-100">
+          <div class="col-6 left"></div>
+          <div class="col-6 right"></div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -188,6 +195,19 @@ main {
   .courses {
     h4 {
       color: $color-jungle-green;
+    }
+  }
+  .video {
+    height: 800px;
+    background-color: $color-tuna;
+    .left {
+      background-image: url("../assets/images/maxcoach-shape-07.png");
+      background-repeat: no-repeat;
+      background-position: 20% 90%;
+    }
+    .right {
+      background-image: url("../assets/images/background-map-dots-top-right-transparent.png");
+      background-repeat: no-repeat;
     }
   }
 }
