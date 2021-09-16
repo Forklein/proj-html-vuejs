@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-6 d-flex justify-content-center align-items-center">
-            <div class="jumbotron-text">
+            <div class="jumbotron-text text-start">
               <h3>New Challenges, New Skills</h3>
               <h1 class="py-3 fw-bold">
                 BUILD YOUR OWN <br />
@@ -15,7 +15,7 @@
                 Whole-Life Business Coaching for committed <br />
                 entrepreneurs
               </h5>
-              <div class="button w-50 px-3 py-3 rounded">
+              <div class="button w-50 px-3 py-3 rounded text-center">
                 <p class="m-0">Get started today</p>
               </div>
             </div>
@@ -62,13 +62,33 @@
     </section>
     <section class="explore mt-5">
       <div class="container">
-        <div class="row pt-5">
+        <div class="row pt-5 mb-5">
           <h4>Let's Dream Big Together</h4>
-          <h2>Explore How can I help you</h2>
+          <h1 class="p-2 fw-bold">Explore How can I help you</h1>
         </div>
-        <div class="row">
+        <div class="row mb-5 pb-5">
           <div v-for="(data, index) in dataExplore" :key="index" class="col-4">
             <ExploreCard :data="data" />
+          </div>
+          <div class="col-6 mx-auto d-flex justify-content-center mt-5">
+            <div
+              v-for="(data, index) in dataExplore"
+              :key="index"
+              class="ball m-2"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="courses">
+      <div class="container">
+        <div class="row pt-5 mb-5">
+          <h4>Let's Dream Big Together</h4>
+          <h1 class="p-2 fw-bold">Explore How can I help you</h1>
+        </div>
+        <div class="row">
+          <div v-for="(data, index) in dataCourses" :key="index" class="col-3">
+            <CoursesCard :data="data" />
           </div>
         </div>
       </div>
@@ -80,21 +100,25 @@
 //# Data
 import dataLeading from "@/assets/data/dataLeading.js";
 import dataExplore from "@/assets/data/dataExplore.js";
+import dataCourses from "@/assets/data/dataCourses.js";
 
 //# Components
 import LeadingCard from "@/components/LeadingCard.vue";
 import ExploreCard from "@/components/ExploreCard.vue";
+import CoursesCard from "@/components/CoursesCard.vue";
 
 export default {
   name: "Main",
   components: {
     LeadingCard,
     ExploreCard,
+    CoursesCard,
   },
   data() {
     return {
       dataLeading,
       dataExplore,
+      dataCourses,
     };
   },
 };
@@ -142,6 +166,17 @@ main {
   }
   .explore {
     background-color: $color-porcelain;
+    h4 {
+      color: $color-jungle-green;
+    }
+    .ball {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: black;
+    }
+  }
+  .courses {
     h4 {
       color: $color-jungle-green;
     }
