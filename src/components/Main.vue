@@ -125,7 +125,39 @@
               </div>
             </div>
           </div>
-          <div class="col-6 right"></div>
+          <div class="col-6 right">
+            <div class="row">
+              <div class="col-7 text-start p-5 mt-5">
+                <h1 class="fw-bold">
+                  To Thrive In Business Today, You'll Need a Good Plan
+                </h1>
+                <div class="question mt-5">
+                  <div class="title d-flex align-items-center">
+                    <i class="fas fa-chevron-circle-up px-2"></i>
+                    <h4>How can we help?</h4>
+                  </div>
+                  <div class="question-description p-4">
+                    <p>
+                      How can we help? How many courses you've been on, using
+                      however many techniques and methods. Unless you've come to
+                      realize the value of mindset, then you've yet to
+                      understand how success comes.<br /><br />
+                      With everyone else's mindset involved impacting too.Hence
+                      why business coaching is so crucial for success.
+                    </p>
+                  </div>
+                  <div class="title d-flex align-items-center">
+                    <i class="fas fa-chevron-circle-up px-2"></i>
+                    <h4>Why would I need a business COACH?</h4>
+                  </div>
+                  <div class="title d-flex align-items-center">
+                    <i class="fas fa-chevron-circle-up px-2"></i>
+                    <h4>What is one-on-one coaching?</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -220,6 +252,9 @@ main {
   .video {
     height: 800px;
     background-color: $color-tuna;
+    h1 {
+      color: $color-white;
+    }
     .left {
       background-image: url("../assets/images/maxcoach-shape-07.png");
       background-repeat: no-repeat;
@@ -233,6 +268,17 @@ main {
     .right {
       background-image: url("../assets/images/background-map-dots-top-right-transparent.png");
       background-repeat: no-repeat;
+      .question-description {
+        p {
+          color: $color-white;
+        }
+      }
+      .title {
+        i,
+        h4 {
+          color: $color-jungle-green;
+        }
+      }
     }
   }
 }
