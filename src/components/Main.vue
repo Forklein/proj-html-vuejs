@@ -146,18 +146,26 @@
                       why business coaching is so crucial for success.
                     </p>
                   </div>
-                  <div class="title d-flex align-items-center">
-                    <i class="fas fa-chevron-circle-up px-2"></i>
+                  <div class="title d-flex align-items-center mt-3">
+                    <i class="fas fa-chevron-circle-down px-2"></i>
                     <h4>Why would I need a business COACH?</h4>
                   </div>
-                  <div class="title d-flex align-items-center">
-                    <i class="fas fa-chevron-circle-up px-2"></i>
+                  <div class="title d-flex align-items-center mt-3">
+                    <i class="fas fa-chevron-circle-down px-2"></i>
                     <h4>What is one-on-one coaching?</h4>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="events">
+      <div class="container">
+        <div class="row pt-5 mb-5">
+          <h4>Wanna transform your life?</h4>
+          <h1 class="p-2 fw-bold">Upcoming Events</h1>
         </div>
       </div>
     </section>
@@ -279,6 +287,11 @@ main {
           color: $color-jungle-green;
         }
       }
+    }
+  }
+  .events {
+    h4 {
+      color: $color-jungle-green;
     }
   }
 }
