@@ -104,7 +104,27 @@
     <section class="video">
       <div class="container-fluid h-100">
         <div class="row h-100">
-          <div class="col-6 left"></div>
+          <div class="col-6 left">
+            <div class="row align-items-center h-100">
+              <div
+                class="
+                  youtube-box
+                  col-9
+                  ms-auto
+                  d-flex
+                  justify-content-center
+                  align-items-center
+                "
+              >
+                <div class="icon">
+                  <img
+                    src="../assets/images/icon-youtube-play.png"
+                    alt="youtube"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col-6 right"></div>
         </div>
       </div>
@@ -204,6 +224,11 @@ main {
       background-image: url("../assets/images/maxcoach-shape-07.png");
       background-repeat: no-repeat;
       background-position: 20% 90%;
+      .youtube-box {
+        background-image: url("../assets/images/home-business-video-poster-670x450.jpg");
+        background-size: cover;
+        height: 450px;
+      }
     }
     .right {
       background-image: url("../assets/images/background-map-dots-top-right-transparent.png");
