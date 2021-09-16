@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card d-flex justify-content-end p-2"
+    class="card"
     :style="{
       backgroundImage:
         'url(' +
@@ -10,7 +10,17 @@
         ')',
     }"
   >
-    <div class="description text-start">
+    <div
+      class="
+        description
+        d-flex
+        flex-column
+        justify-content-end
+        text-start
+        h-100
+        p-2
+      "
+    >
       <h4>{{ data.price }}</h4>
       <p class="fw-bold">{{ data.description }}</p>
     </div>
@@ -30,6 +40,11 @@ export default {
 .card {
   height: 500px;
   .description {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 100%,
+      rgba(0, 0, 0, 0.1) 30%
+    );
     h4 {
       color: $color-jungle-green;
     }

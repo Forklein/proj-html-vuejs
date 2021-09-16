@@ -101,6 +101,7 @@
         </div>
       </div>
     </section>
+    <section class="video"></section>
   </main>
 </template>
 
