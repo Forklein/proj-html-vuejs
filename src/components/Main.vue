@@ -167,11 +167,19 @@
           <h4>Wanna transform your life?</h4>
           <h1 class="p-2 fw-bold">Upcoming Events</h1>
         </div>
-        <div class="row">
-          <div class="col-6">
-            <EventsCard />
+        <div class="row g-3">
+          <div v-for="(data, index) in dataEvents" :key="index" class="col-6">
+            <EventsCard :data="data" />
           </div>
-          <div class="col-6"></div>
+        </div>
+        <div class="row">
+          <div class="col mt-5">
+            <p>
+              Excited about our event?
+              <strong><u>View all courses</u></strong>
+              <i class="fas fa-long-arrow-alt-right p-2"></i>
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -300,8 +308,12 @@ main {
     }
   }
   .events {
-    h4 {
-      color: $color-jungle-green;
+    h4,
+    p {
+      strong,
+      i {
+        color: $color-jungle-green;
+      }
     }
   }
 }
