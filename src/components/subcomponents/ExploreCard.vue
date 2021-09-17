@@ -15,7 +15,7 @@
         h-100
       "
     >
-      <p class="m-0">Discover now</p>
+      <p class="click m-0">Discover now</p>
       <i class="fas fa-long-arrow-alt-right p-2"></i>
     </div>
   </div>
@@ -39,6 +39,11 @@ export default {
 .card {
   .box {
     color: $color-jungle-green;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-jungle-green;
+      color: $color-white;
+    }
   }
 }
 </style>

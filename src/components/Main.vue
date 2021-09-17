@@ -305,10 +305,19 @@ main {
     p {
       &.first {
         color: $color-jungle-green;
+        cursor: pointer;
+        &:hover {
+          background-color: $color-tuna;
+          color: $color-white;
+        }
       }
       &.second {
         background-color: $color-jungle-green;
         color: $color-white;
+        cursor: pointer;
+        &:hover {
+          background-color: $color-tuna;
+        }
       }
     }
   }
