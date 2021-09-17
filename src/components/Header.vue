@@ -80,5 +80,8 @@ header {
   i {
     font-size: 12px;
   }
+  .language {
+    cursor: pointer;
+  }
 }
 </style>
