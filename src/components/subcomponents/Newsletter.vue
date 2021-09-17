@@ -59,7 +59,7 @@ export default {
     color: $color-white;
   }
   p {
-    color: gray;
+    color: $color-boulder;
   }
 }
 </style>

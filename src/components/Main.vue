@@ -277,7 +277,6 @@ export default {
 
 main {
   .jumbotron {
-    position: relative;
     background-color: $color-porcelain;
     h3 {
       color: $color-jungle-green;
@@ -288,14 +287,17 @@ main {
     .button {
       background-color: $color-jungle-green;
       color: $color-white;
+      cursor: pointer;
     }
     .earth {
       background-image: url("../assets/images/home-business-hero-global-image.png");
     }
     .icons {
-      position: absolute;
-      top: 20%;
+      position: fixed;
+      top: 25%;
       right: 20px;
+      box-shadow: 0px 0px 15px $color-jungle-green;
+      cursor: pointer;
     }
   }
   .leading-edge {

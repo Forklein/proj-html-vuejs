@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex">
     <div class="col-1 me-3">
-      <i class="fas fa-database fa-2x"></i>
+      <i :class="data.icon"></i>
     </div>
     <div class="col text-start">
       <div class="title">

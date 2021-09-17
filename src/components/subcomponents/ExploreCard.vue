@@ -37,6 +37,11 @@ export default {
 @import "../../assets/scss/_variables.scss";
 
 .card {
+  .description {
+    p {
+      color: $color-boulder;
+    }
+  }
   .box {
     color: $color-jungle-green;
     cursor: pointer;

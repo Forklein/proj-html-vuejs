@@ -39,6 +39,11 @@ export default {
 @import "../../assets/scss/_variables.scss";
 .card {
   min-height: 317px;
+  .text {
+    p {
+      color: $color-boulder;
+    }
+  }
   h5 {
     color: $color-tuna;
   }
