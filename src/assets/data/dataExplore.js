@@ -2,7 +2,7 @@ export default [
     {
         title: "Consultative Training",
         description:
-            "With a coach addressing multiple issues that are off balance, affecting your business in various unconsidered ways.",
+            "With a coach addressing multiple issues that are off balance, affecting your business in various.",
         image: "01"
     },
     {

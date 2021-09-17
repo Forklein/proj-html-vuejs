@@ -13,6 +13,7 @@
         align-items-center
         border-top
         h-100
+        p-2
       "
     >
       <p class="click m-0">Discover now</p>

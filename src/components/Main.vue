@@ -102,9 +102,9 @@
       </div>
     </section>
     <section class="video">
-      <div class="container-fluid h-100">
-        <div class="row h-100">
-          <div class="col-6 left">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6 left p-5">
             <div class="row align-items-center h-100">
               <div
                 class="
@@ -131,30 +131,13 @@
                 <h1 class="fw-bold">
                   To Thrive In Business Today, You'll Need a Good Plan
                 </h1>
-                <div class="question mt-5">
-                  <div class="title d-flex align-items-center">
-                    <i class="fas fa-chevron-circle-up px-2"></i>
-                    <h4>How can we help?</h4>
-                  </div>
-                  <div class="question-description p-4">
-                    <p>
-                      How can we help? How many courses you've been on, using
-                      however many techniques and methods. Unless you've come to
-                      realize the value of mindset, then you've yet to
-                      understand how success comes.<br /><br />
-                      With everyone else's mindset involved impacting too.Hence
-                      why business coaching is so crucial for success.
-                    </p>
-                  </div>
-                  <div class="title d-flex align-items-center mt-3">
-                    <i class="fas fa-chevron-circle-down px-2"></i>
-                    <h4>Why would I need a business COACH?</h4>
-                  </div>
-                  <div class="title d-flex align-items-center mt-3">
-                    <i class="fas fa-chevron-circle-down px-2"></i>
-                    <h4>What is one-on-one coaching?</h4>
-                  </div>
-                </div>
+                <VideoCard
+                  v-for="(data, index) in dataVideo"
+                  :key="index"
+                  :dataVideo="dataVideo"
+                  :data="data"
+                  :index="index"
+                />
               </div>
             </div>
           </div>
@@ -197,6 +180,7 @@
             :key="index"
             class="col-4"
             :class="data.done ? '' : 'opacity-50'"
+            @click="setIndexFeedback(index)"
           >
             <FeedbackCard :data="data" />
           </div>
@@ -225,6 +209,7 @@
 import dataLeading from "@/assets/data/dataLeading.js";
 import dataExplore from "@/assets/data/dataExplore.js";
 import dataCourses from "@/assets/data/dataCourses.js";
+import dataVideo from "@/assets/data/dataVideo.js";
 import dataEvents from "@/assets/data/dataEvents.js";
 import dataFeedback from "@/assets/data/dataFeedback.js";
 
@@ -232,6 +217,7 @@ import dataFeedback from "@/assets/data/dataFeedback.js";
 import LeadingCard from "@/components/subcomponents/LeadingCard.vue";
 import ExploreCard from "@/components/subcomponents/ExploreCard.vue";
 import CoursesCard from "@/components/subcomponents/CoursesCard.vue";
+import VideoCard from "@/components/subcomponents/VideoCard.vue";
 import EventsCard from "@/components/subcomponents/EventsCard.vue";
 import FeedbackCard from "@/components/subcomponents/FeedbackCard.vue";
 import Newsletter from "@/components/subcomponents/Newsletter.vue";
@@ -242,6 +228,7 @@ export default {
     LeadingCard,
     ExploreCard,
     CoursesCard,
+    VideoCard,
     EventsCard,
     FeedbackCard,
     Newsletter,
@@ -252,6 +239,7 @@ export default {
       dataLeading,
       dataExplore,
       dataCourses,
+      dataVideo,
       dataEvents,
       dataFeedback,
     };
