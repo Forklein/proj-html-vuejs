@@ -23,6 +23,14 @@
     >
       <h4>{{ data.price }}</h4>
       <p class="fw-bold">{{ data.description }}</p>
+      <div class="info-hover d-none">
+        <i class="far fa-clipboard pe-2">&nbsp;20 Lessons</i>
+        <i class="far fa-user">&nbsp;50 Students</i>
+        <p>
+          The purpose of this course is to provide the advanced writing
+          techniquest commonly used for inspiring readers and ..
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -50,6 +58,15 @@ export default {
     p {
       color: $color-white;
     }
+    i {
+      color: $color-white;
+    }
   }
+  &:hover {
+    .info-hover {
+      display: block !important;
+    }
+  }
+  cursor: pointer;
 }
 </style>
