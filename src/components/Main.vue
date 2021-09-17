@@ -204,6 +204,9 @@
         </div>
       </div>
     </section>
+    <section class="newsletter">
+      <Newsletter />
+    </section>
   </main>
 </template>
 
@@ -221,6 +224,7 @@ import ExploreCard from "@/components/subcomponents/ExploreCard.vue";
 import CoursesCard from "@/components/subcomponents/CoursesCard.vue";
 import EventsCard from "@/components/subcomponents/EventsCard.vue";
 import FeedbackCard from "@/components/subcomponents/FeedbackCard.vue";
+import Newsletter from "@/components/subcomponents/Newsletter.vue";
 
 export default {
   name: "Main",
@@ -230,6 +234,7 @@ export default {
     CoursesCard,
     EventsCard,
     FeedbackCard,
+    Newsletter,
   },
   data() {
     return {
