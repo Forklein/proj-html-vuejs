@@ -104,7 +104,7 @@
     <section class="video">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-6 left p-5">
+          <div class="col-6 left p-5" style="height: 872px">
             <div class="row align-items-center h-100">
               <div
                 class="
