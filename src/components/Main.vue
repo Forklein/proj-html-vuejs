@@ -195,11 +195,21 @@
           <div
             v-for="(data, index) in dataFeedback"
             :key="index"
-            @click="setIndexFeedback(index)"
             class="col-4"
             :class="data.done ? '' : 'opacity-50'"
           >
             <FeedbackCard :data="data" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 mx-auto d-flex justify-content-center my-5">
+            <div
+              v-for="(data, index) in dataFeedback"
+              @click="setIndexFeedback(index)"
+              :class="data.done ? '' : 'opacity-50'"
+              :key="index"
+              class="ball m-2"
+            ></div>
           </div>
         </div>
       </div>
@@ -367,6 +377,13 @@ main {
   }
   .feedback {
     background-color: $color-porcelain;
+    .ball {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: black;
+      cursor: pointer;
+    }
     .title {
       h4 {
         color: $color-jungle-green;
