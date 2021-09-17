@@ -1,6 +1,6 @@
 <template>
   <div class="container pt-5">
-    <div class="row">
+    <div class="row mb-5">
       <div class="col-3 left"></div>
       <div class="col-6">
         <h1>Subscribe <span>Newsletter</span></h1>
@@ -25,7 +25,9 @@
           </button>
         </div>
       </div>
-      <div class="col-3 right"></div>
+      <div class="col-3 right align-self-center">
+        <img src="@/assets/images/maxcoach-shape-02.png" alt="image" />
+      </div>
     </div>
   </div>
 </template>
