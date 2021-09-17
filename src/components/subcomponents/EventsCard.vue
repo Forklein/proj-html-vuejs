@@ -27,6 +27,13 @@ export default {
 @import "../../assets/scss/_variables.scss";
 .card {
   background-color: $color-porcelain;
+  &:hover {
+    background-color: $color-white;
+    border-left: 3px solid $color-jungle-green;
+    #ticket {
+      background-color: $color-tuna;
+    }
+  }
   #location {
     color: $color-boulder;
   }
@@ -36,5 +43,11 @@ export default {
     padding: 5px 20px;
     cursor: pointer;
   }
+  .date {
+    .h2 {
+      color: $color-jungle-green;
+    }
+  }
+  cursor: pointer;
 }
 </style>
